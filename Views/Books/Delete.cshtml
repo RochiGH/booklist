@@ -1,0 +1,52 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<br />
+<h2>Cancella il tuo libro</h2>
+<hr />
+
+<form asp-action="Delete">
+    <div class="container">
+        <div asp-validation-summary="ModelOnly" disable class="text-danger"></div>
+        <div class="form-group">
+            <div class=" row">
+                <div class="col-sm-1">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Name" disable class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class=" row">
+                <div class="col-sm-1">
+                    <label asp-for="Author"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Author" disable class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class=" row">
+                <div class="col-sm-1">
+                    <label asp-for="Price"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Price" disable class="form-control" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Cancella" class="btn btn-sm btn-danger" />
+            <a asp-action="Index" class="btn btn-sm btn-success">Torna alla lista dei tuoi libri</a>
+        </div>
+    </div>
+
+</form>
